@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        :root{
+            --boz-height: 100px;
+            --box-color: rgb(103, 165, 36);
+            
+        }
+        .box1{
+            height: var(--boz-height);
+            background-color: var(--box-color);
+            margin-bottom: 10px;
+        }
+        .box2{
+            height: var(--boz-height);
+            background-color: var(--box-color);
+            margin-bottom: 10px;
+        }
+        .box3{
+            height: var(--boz-height);
+            background-color: var(--box-color);
+            margin-bottom: 10px;
+        }
+        .detail{
+            --p_fontsize:30px;
+            font-size: var(--p_fontsize);
+
+        }
+        .detail span{
+            font-size:30px;
+        }
+        .content{
+            --background-box:red;
+        }
+        .box4{
+            height: 100px;
+            background-color: var(--background-box, yellow);
+        }
+        /* .box1{
+            height: 100px;
+            background-color: green;
+            margin-bottom: 10px;
+        }
+        .box2{
+            height: 100px;
+            background-color: green;
+            margin-bottom: 10px;
+        }
+        .box3{
+            height: 100px;
+            background-color: green;
+            margin-bottom: 10px;
+        } */
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="box1">box</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <p class="detail">chao cac ban den voi chanel cua minh <span>xvideos</span></p>
+        <div class="box4">box4</div>
+    </div>
+</body>
+</html>

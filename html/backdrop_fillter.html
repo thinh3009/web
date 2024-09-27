@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(/img/bg.jpg);
+            background-size: cover;
+        }
+
+        .box {
+            margin-top: 40px;
+            height: 100px;
+            background-color: rgb(104, 93, 114);
+        }
+
+        @supports((backdrop-filter: blur(50px) contrast(50%)) or (-webkit-backdrop-filter:blur(50px) contrast(50%))) {
+            .box {
+                margin-top: 40px;
+                height: 100px;
+                background-color: rebeccapurple;
+                backdrop-filter: blur(50px) contrast(50%);
+                -webkit-backdrop-filter: blur(50px) contrast(50%);
+
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+</body>
+
+</html>

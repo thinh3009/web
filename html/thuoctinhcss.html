@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thuoc tinh co ban</title>
+    <style>
+        h2{
+            /* do trong suot bao gom ca nen */
+            opacity: 20%;
+            background-color: aqua;
+        }
+        img{
+            transition: 1.5s;
+        }
+        
+        input:checked ~ img{
+            /* 1. bien mat khoir giao dien */
+            /* display: none; */
+            /* 2. lm mo di va khong tuong tac duoc */
+            opacity: 50%;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>xin chao</h1>
+    <h2> cam on</h2>
+    <h3>tam biet</h3>
+    <img src="https://i.ytimg.com/vi/JWHvsoxLPMU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDnxb_aQvUaRgTZ3dPTMG9-6GOexQ" alt="">
+    <input type="checkbox"> click please!! <br>
+    <img src="https://i.ytimg.com/an_webp/dVX3MJeyYgQ/mqdefault_6s.webp?du=3000&sqp=CKCppLcG&rs=AOn4CLDggXpndzQ2f1K3GrtE6_FSLzotqw" alt="">
+</body>
+</html>

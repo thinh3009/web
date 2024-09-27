@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            /* can giua teext */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box1 {
+            background: red;
+            /* position: static; */
+        }
+
+        .box2 {
+            background: blue;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .box3 {
+            background: green;
+            position: relative;
+            bottom: 50px;
+        }
+
+        h1 {
+            background: pink;
+        }
+
+        .content {
+          
+            background: cyan;
+            width: 400px;
+            margin: 40px;
+        }
+        .header{
+            position: relative;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="content">
+            <div class="box box1">
+                block
+            </div>
+            <div class="box box2">
+                block
+            </div>
+            <div class="box box3">
+                block
+            </div>
+            <h1>okokokoko</h1>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

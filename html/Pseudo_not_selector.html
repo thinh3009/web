@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type selector</title>
+    <style>
+        /* univer selertor */
+        *{
+            color: red;
+        }
+        /* element */
+        h1{
+            color: green;
+        }
+        /* class -pseudo class */
+        .top{
+            color: black;
+        }
+        /* inline stye--> viet trong code */
+
+        /* tat ca loai tru */
+        .top:not(p){
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="top">dcm yhoc lm gi </h1>
+        <p class="top">doan 1</p>
+        <p class="top">doan 2</p>
+        <h2 class="top">tu hoc di</h2>
+    </div>
+
+    
+
+</body>
+
+</html>

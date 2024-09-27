@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child selector</title>
+    <style>
+        /* tac dong len the p firstchild */
+        /* p:first-child {
+            color: red;
+            font-size: 30px;
+        } */
+        /* lastchild */
+        /* p:last-child{
+            color: green;
+            font-size: 40px;
+        } */
+        /* the con thu n */
+        /* p:nth-child(2){
+            color: pink;
+        } */
+        p:nth-child(odd) {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>doan 1</p>
+        <p>doan 2</p>
+        <p>doan 3</p>
+    </div>
+
+    <div class="demo">
+        <p>noi dung</p>
+        <p>doan 2</p>
+        <p>doan 3</p>
+    </div>
+
+
+</body>
+
+</html>

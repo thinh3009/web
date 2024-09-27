@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type selector</title>
+    <style>
+        /* tac dong len the p firstchild */
+        /* p:first-child {
+            color: red;
+            font-size: 30px;
+        } */
+        /* lastchild */
+        /* p:last-child{
+            color: green;
+            font-size: 40px;
+        } */
+        /* the con thu n */
+        /* p:nth-child(2){
+            color: pink;
+        } */
+        p:first-child {
+            color: red;
+            font-size: 20px;
+        }
+        p:first-of-type {
+            /* thay doi kieu dau tien cua the p */
+            color: red;
+            font-size: 20px;
+        }
+        h2.last-of-type{
+            color:green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>dcm </h1>
+        <p>doan 1</p>
+        <p>doan 2</p>
+        <p>doan 3</p>
+    </div>
+
+    <div class="demo">
+        <p>noi dung</p>
+        <p>doan 2</p>
+        <p>doan 3</p>
+        <h2>hay gheha</h2>
+        <h2>hay gheha</h2>
+        <h2>hay gheha</h2>
+    </div>
+
+
+</body>
+
+</html>

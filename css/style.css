@@ -1,0 +1,378 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    --font-heading:"Sen", sans-serif;
+    --primary-color:#ffb900;
+}
+html{
+    font-size: 62.5%;
+}
+
+/* khoi phuc chu mac dinh */
+body{
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+/* phan dung chung */
+a{
+    text-decoration: none;
+}
+
+.heading-lv2{
+    color: black;
+    font-family: var(--font-heading);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.27;
+    letter-spacing: -0.76px;
+}
+
+.main-content{
+    width: 1072px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+}
+.btn{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-size: 1.6rem;
+    border-radius: 9px;
+    background: black;
+    padding: 3px 16px;
+    height: 30px;
+    width: 90px;
+    line-height: 20px;
+
+}
+.btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+/* header */
+.header{
+    background: antiquewhite;
+}
+.header.fixed{
+    z-index: 1;
+    position: sticky;
+    top: -28px;
+}
+.header .body{
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px;
+}
+.nav ul{
+    display: flex;
+}
+.nav{
+    margin-left: auto;
+}
+.nav a{
+    position: relative;
+    color: black;
+    font-size: 1.6rem;
+    margin: 8px 21px;
+   
+}
+.nav li.active,
+.nav a:hover{
+    color: blue;
+    text-shadow: 1px 0 0 currentColor;
+}
+.nav li.active a::after{
+    position: absolute;
+    left: 1px;
+    margin-top:3px;
+    padding: 1px;
+    display: block;
+    content: "";
+    width: 12px;
+    border-radius: 2px;
+    background: black;
+
+}
+.headr .btn-signup{
+    min-width: 114px;
+
+}
+
+.header .action{
+    margin-left: 49px;
+}
+
+/* hero left*/
+.hero{
+    padding: 56px 0 65px;
+    background-color: antiquewhite;
+}
+.hero .body{
+    display: flex;
+
+}
+
+.hero .media-block{
+    width: 60%;
+    position: relative;
+}
+.hero .content-block{
+    width: 40%;
+}
+.hero .media-block .img{
+    width: 470px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.hero .hero-summary{
+    padding: 24px;
+    position: absolute;
+    bottom: 48px;
+    right: 50px;
+    border-radius: 12px;
+    background-color: aqua;
+    box-shadow: 0px 16px 32px 0px red;
+    width: 270px;
+
+}
+
+.hero-summary .item{
+    display: flex;
+    align-items: center;
+    
+}
+.hero-summary .item+.item{
+   margin-top: 22px;
+    
+}
+.hero-summary .icon{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+}
+.hero-summary .icon2{
+    
+    background: green;
+}
+
+.hero-summary .icon3{
+    
+    background: gray;
+}
+.hero-summary .info{
+    margin-left: 16px;
+
+}
+.hero-summary .label{
+    color: black;
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+.hero-summary .title{
+    color: yellow;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+/* hero right */
+
+.hero .content-block{
+    width: 52%;
+    padding-left: 130px;
+}
+
+.hero .heading{
+    color: hsl(44, 100%, 5%);
+    font-family: var(--font-heading);
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: -1.16px;
+}
+.hero .desc{
+    margin-top: 22px;
+    color: hsl(44, 100%, 5%);
+    font-size: 1.8rem;
+    line-height: 1.67;
+
+}
+.hero .cta-group{
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-cta{
+    min-width: 180px;
+    max-height: fit-content;
+    background-color: var(--primary-color);
+
+}
+
+.hero .watch-video{
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 28px
+    
+}
+.hero .watch-video span{
+    margin-left: 8px;
+    font-size: 1.8rem;
+
+}
+.hero .watch-video .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    border-radius: 40px;
+    background: wheat;
+    
+}
+
+.hero .desc-recent{
+    margin-top: 48px;
+}
+
+.hero .start strong{
+    color: black;
+    font-family: var(--font-heading);
+    font-size: 4.4rem;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.hero .start strong:nth-child(2){
+    margin-left: 28px;
+}
+/* popular */
+
+.popular{
+    padding: 65px 0;
+
+    margin-top: 135px;
+}
+
+.popular-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular-top .desc{
+    color: black;
+    margin-top: 16px;
+    width: 458px;
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.popular-top .control{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.popular-top .control-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    width: 40px;
+    color: var(--primary-color);
+    height: 40px;
+
+
+}
+
+.popular-top .control-btn:hover{
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.popular .course-list{
+    display: flex;
+    margin-top: 55px;
+  
+    gap: 30px;
+}
+.popular .course-item .thumb{
+    width: 100%;
+    border-radius: 12px 12px 0px 0px;
+    height: 278px;
+    object-fit: cover;
+}
+.popular .course-item{
+    border-radius: 12px;
+    border: 1px solid #E2DFDA;
+    background: white;
+}
+
+.popular .course-item:hover{
+    
+}
+
+.popular .course-item .infor{
+    padding: 16px 22px 22px;
+}
+.popular .course-item .foot,
+.popular .course-item .rating,
+.popular .course-item .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .course-item .title{
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+.popular .rating .fa-solid,
+.popular .rating .value{
+    margin-left: 6px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--primary-color)
+    
+}
+.popular .course-item .desc{
+    margin-top: 6px;
+    color: black;
+    font-size: 1.4rem;
+    line-height: 1.86;
+}
+
+.popular .course-item .foot{
+    margin-top: 12px;
+}
+
+.popular .course-item .price{
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.popular .course-item .btn-book{
+    border: none;
+}
+
+.popular .course-item .btn-book:hover{
+    background: var(--primary-color);
+    
+}
