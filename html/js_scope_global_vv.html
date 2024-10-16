@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //global,fuction-scope,block-scope
+        //global function
+        let a=1;
+        console.log(a);
+        function vidu1(){
+            console.log(a);
+            if(a%2===0){
+                console.log("a la so chan");
+
+            }
+            else{
+                console.log("a la so le")
+            }
+        }
+        vidu1();
+        //funcition-scpoe
+        function vidu2(){
+            //truy xuat ben trong ham
+            let b=2;
+            console.log(b);
+            //truy cap dc tu cac cap sau hon ben trong
+            if(b%2===0){
+                console.log("chann");
+            }
+            else{
+                console.log("le");
+            }
+        }
+        vidu2();
+        //block-scope(bien chi nam trong {})
+        let n=3;
+        if(n===3){
+            let m=1;
+            console.log(m);
+            if(m%2===0){
+                console.log("chan");
+            }
+            else{
+                console.log("le");
+            }
+        }
+
+    </script>
+</body>
+</html>

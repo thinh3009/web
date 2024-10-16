@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //dem ky tu in hoa thuong
+        let nhap=prompt("nhap ky tu");
+        //khoi tao dem
+        let lowCaseCount=0;
+        let upCaseCount=0;
+        let digitCount=0;
+        let spaceCount=0;
+        //lengt xuat do dai cua chuoi khi lap se chay theo index
+        for(let i=0;i<=nhap.length;i++){
+            console.log(nhap[i]);//xuat input cua cai str 
+            let char=nhap[i];
+            //kienm tra gia tri
+            if(char>="a" && char<="z"){
+                lowCaseCount++;
+            }
+            else if(char>="A" && char<="Z"){
+                upCaseCount++;
+            }
+            else if(char >="0" && char<="9"){
+                digitCount++
+            }
+            else if(char===" "){
+                spaceCount++;
+            }
+
+
+
+        }
+        //in ket qua
+        console.log("so chu thuong"+lowCaseCount);
+        console.log("so chu hoa"+upCaseCount);
+        console.log("so chu so"+digitCount);
+        console.log("so khoang trang"+spaceCount);
+    </script>
+</body>
+</html>

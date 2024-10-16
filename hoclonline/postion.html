@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+
+        }
+
+        #id1 {
+            background-color: red;
+            position: absolute;
+            /* lop cua box */
+            z-index: -1;
+            top: 10px;
+            left: 10px;
+        }
+
+        .container{
+            background-color: black;
+            width: 300px;
+            height: 200px;
+        }
+        #id2 {
+            background-color: blue;
+           
+            top: 70px;
+            left: 60px;
+        }
+
+        #id3 {
+            background-color: green;
+            position: absolute;
+
+        }
+
+        #id4 {
+            background-color: gray;
+            position:sticky;
+        }
+
+        #id5 {
+            background-color: aqua;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="id1">id 1</div>
+    <div class="container">
+        <div id="id2">id 2</div>
+        <div id="id3">id 3</div>
+    </div>
+
+    <div id="id4">id 4</div>
+    <div id="id5">id 5</div>
+</body>
+
+</html>

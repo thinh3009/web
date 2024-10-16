@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //giai thua
+
+        /*let n = Number(prompt("nhap so: "));
+        while (!Number.isInteger(n) || n < 0) {
+            //tao bien roif khong can tao lai
+            n = Number(prompt("nhap lai: "));
+
+        }
+        function Giaithua(n) {
+            let tong = 1;
+            for (let i = 1; i <= n; i++) {
+                tong = tong * i;
+
+            }
+            return tong;
+
+        }
+        let giai_Thua = Giaithua(n);
+        console.log(`giai thua ${n}:  ${giai_Thua}`)
+        */
+        //ptrinh bac2
+        let a = Number(prompt("nhap a: ")); b = Number(prompt("nhap b: ")); c = Number(prompt("nhap c: "));
+        
+        function ptrinh(a,b,c){
+            let del_ta=(b**2)-(4*a*c);
+            if(del_ta<0){
+                console.log("phuong trinh vo nghiem");
+
+            }
+            else if(del_ta>0){
+                console.log("phuong trinh 2 nghiem phan biet");
+                let x1=(-b+Math.sqrt(del_ta))/2*a;
+                let x2=(-b-Math.sqrt(del_ta))/2*a;
+                console.log(`x1: ${x1}, x2: ${x2}`);
+            }
+            else{
+                console.log("phuong trinh co nghiem kep");
+                x1=(-b)/2*a;
+                return x1;
+
+            }
+        }
+        
+        console.log(`giatria: ${a},giatrib: ${b},giatric: ${c}`);
+        ptrinh(a,b,c);
+        
+        
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

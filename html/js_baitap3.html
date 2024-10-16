@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function encrypt(mess) {
+            const a = "abcdefghijklmnopqrstuvwxyz";
+            const b = "zxcvbnmasdfghjklqwertyuiop";
+            let result = "";
+            for (let i = 0; i < mess.length; i++) {
+                let char = mess[i].toLowerCase();
+                //kiem tra xem nhap co trong bang ma khong
+                if (a.includes(char)) {
+                    //kiem tra vi tri a
+                    let index = a.indexOf(char);
+                    //lay gia tri index so sanh chuoi b de lay ki tu b
+                    result += b[index];
+
+                }
+                else {
+                    result += char;
+                }
+            }
+            return result;
+        }
+        let messInput = prompt("nhap tin nhan can ma hoa: ");
+        let kq = encrypt(messInput);
+        alert("ket qua: " + kq);
+    </script>
+</body>
+
+</html>

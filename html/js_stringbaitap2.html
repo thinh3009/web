@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function kiemtra(pass) {
+            if (pass.length < 6) {
+                return false;
+            }
+            let handUp = false;
+            let handLow = false;
+            let digit = false;
+            for (let i = 0; i <= pass.length; i++) {
+                let char = pass[i];
+                if (char >= "a" && char <= "z") {
+                    handLow = true;
+                }
+                else if (char >= "A" && char <= "Z") {
+                    handUp = true;
+                }
+                else if (char >= "0" && char <= "9") {
+                    digit = true;
+                }
+            }
+            return digit && handLow && handUp;
+            
+        }
+        //set pass
+        function setPass(){
+            let pass=prompt("nhap mat khau: ");
+            if(kiemtra(pass)){
+                alert("dat thanh cong mat khau: "+pass);
+                return pass;
+            }
+            else{
+                alert(`
+                    phai co 6 ky tu,co chu hoa chu thuong,co so!
+                `)
+                //goi lai ham
+                setPass();
+            }
+        }
+        //goi ham
+        let passok=setPass();
+        console.log(passok);
+
+
+    </script>
+</body>
+
+</html>

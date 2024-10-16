@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //kiem tra ky tu co trong chuoi luc bat dau khong
+        let s30="abcfesef asefasef";
+        console.log(s30.startsWith("a"));
+        //tim vi tri index
+        console.log(s30.startsWith("as",1));
+        //string.endWiths():
+        let s31="2344234234346456";
+        console.log(s31.endsWith("6"));
+        //kiem tra index tu dau den n-1
+        console.log(s31.endsWith("4",10));
+        //kiem tra
+        let ten="nhac.mp3";
+        if(ten.endsWith(".mp3")){
+            console.log("day la mp3");
+        }
+        else{
+            console.log("khong phai");
+        }
+    </script>
+</body>
+</html>

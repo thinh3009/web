@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i=1;
+        while(i<=5){
+            console.log(i);
+            i++;
+        }
+        let n=Number(prompt("nhap so tu 1 den 99: "));
+        console.log(n);
+        while(n<1 || n>99 || isNaN(n) ||n%1!==0){
+            n=Number(prompt("khong hop len nhap lai"));
+
+        }
+        alert("so ban nhap: "+n);
+        console.log("so: "+n);
+    </script>
+</body>
+</html>

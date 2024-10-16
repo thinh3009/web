@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let currDate= new Date();
+        console.log(currDate);
+        console.log(typeof currDate);
+        let year=currDate.getFullYear();
+        let month=currDate.getMonth()+1;
+        let day=currDate.getDate();
+        let hour=currDate.getHours();
+        let minute=currDate.getMinutes();
+        let sec=currDate.getSeconds();
+        console.log(`nam: ${year}, thang: ${month}, ngay: ${day}`);
+        //timestamp
+        let timestamp1=new Date(0);
+        console.log(timestamp1);
+    </script>
+</body>
+</html>

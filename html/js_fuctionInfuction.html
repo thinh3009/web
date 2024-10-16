@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function nhan(x,y){
+            return x*y;
+        }
+        function cong(a,b){
+            return a*b;
+        }
+        //ham goi ham
+        function congNhan(num1,num2,num3){
+            //tinh tong
+            let sum=cong(num1,num2);
+            //goi ham nhan
+            let prd=nhan(sum,num3);
+            //ket qua
+            return prd;
+
+        }
+        let result=congNhan(2,3,4);
+        console.log(result);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function declaration
+        function tinhTong(){
+            console.log("hello!!!");
+        }
+
+        //goi ham
+
+        tinhTong();
+        //ham cos tham so
+        // let inPutName=prompt("nhap ten: ");
+        function xinChao2(name){
+            console.log("chao mung"+name);
+        }
+        // xinChao2(inPutName);
+        xinChao2("okokokok");
+        //vd2: tinhs tong 2 so
+        function tinhTong(a,b){
+            let ketQua=a+b;
+            return ketQua;
+        }
+        //goi ham
+        console.log(tinhTong(5,6));
+        //gan bien cho ham
+        let toan=8;
+        let van=7;
+        let tongDiem=tinhTong(toan,van);
+        console.log(tongDiem);
+        console.log("dtb: ",tongDiem/2);
+
+        function tinhTong2(a=0,b=3){
+            return a+b;
+        }
+        console.log(tinhTong2(5))
+    </script>
+</body>
+</html>

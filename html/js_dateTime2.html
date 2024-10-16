@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myDate1=new Date(2024,1,14);
+        console.log(myDate1);
+        console.log(myDate1.toLocaleDateString());
+        //cach 2:
+        const myDate2=new Date("2024-02-15T12:30:45");
+        console.log(myDate2);
+        console.log(myDate2.toLocaleDateString());
+        //cach 3:
+        let myDate3=new Date();
+        myDate3.setFullYear(2023);
+        myDate3.setMonth(2);
+        myDate3.setDate(6);
+        console.log(myDate3);
+        //xuat theo ngay thang nam
+        console.log(myDate3.toLocaleDateString());
+        //xuat ngay thang nam theo dinh dang mong muon (tu viet de xuat)
+        console.log(`ngay ${myDate3.getDate()}/${myDate3.getMonth()+1}/${myDate3.getFullYear()}`);
+
+
+        //them 0 xuat ngay thang
+        let prefixDate=myDate3.getDate()<10?"0":"";
+        let prefixMonth=myDate3.getMonth()<9?"0":"";
+
+        console.log(`
+            ngay: ${prefixDate}${myDate3.getDate()}/thang: ${prefixMonth}${myDate3.getMonth()+1}/nam: ${myDate3.getFullYear()}
+        `);
+
+
+
+
+    </script>
+</body>
+</html>

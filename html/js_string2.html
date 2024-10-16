@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //string slice
+        let s4 = "1233454567567";
+        //cat chuoi
+        let s5 = s4.slice(1, 4);
+        console.log(s5);
+        //endIndex:khong nhap gi thi mac dinh cat cuoi chuoi 
+        //co the hieu ngam dinh la endIndex=s4.length
+
+        //vd
+        let s6 = "123123123123"
+        console.log("ban nhap " + s6.length + " ki tu");
+        if (s6.length > 20) {
+            console.log("qua 20 ki tu: " + (s6.length - 20));
+            let s7 = s6.slice(0, 20);
+            console.log(s7);
+        }
+        //rut gon
+        console.log("chuoi sau xu ly" + prompt("nhap chuoi").slice(0, 20));
+
+
+        let s8 = "1233454567567";
+        //cat chuoi substring
+        let s9 = s8.substring(1, 4);
+        console.log(s9);
+
+        //so sanh slice() va substring()
+        let s10 = "0123456";
+        console.log("dung substring: ");
+        console.log(s10.substring(1, 4));
+        console.log(s10.substring(4, 1));
+        console.log("dung slice: ");
+        console.log(s10.slice(1, 4));//ra ket qua
+        console.log(s10.slice(4, 1));//chuoi rong
+
+        //substring chuyen thanh so am
+        let s11 = "123456789";
+        console.log(s11.substring(-3, -1));//=(0,0)
+        //substring co 1 tham so am
+        console.log("truong hop 1 tham so am");
+        console.log(s11.substring(4,-5));//=(4,0)
+        //dung slice tham so am
+        console.log(s11.slice(-3,-1));//cat tu -3 den -2
+
+    </script>
+</body>
+</html >

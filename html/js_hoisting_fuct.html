@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //hoisting Fuction declaration: goi ham truoc khi dinh nghia dc
+        hoisfuct();
+        function hoisfuct(){
+            console.log("helo");
+        }
+
+        //hoisting Expression: khong goi ham trc dc
+        //nonhoist();
+        let nonhoist=function(){
+            console.log("hello");
+        }
+
+        //hoisting Arrow Fuction: khong co hoisting
+        //arrowfuct();
+        let arrowfuct=()=>{
+            console.log("helo");
+        }
+    </script>
+</body>
+</html>

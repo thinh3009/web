@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=123;
+        console.log(typeof a);
+        let b=String(a);
+        console.log(typeof b);
+        //8 gia tri falsy khi doi sang bool la false
+        //false,0,-0,0n,"",null,underfined,NaN
+        let c=Boolean();
+        console.log(c);
+        console.log(typeof c);
+
+        //vii du kiem tra da gan ga tri hay chua
+        let salary;
+        console.log(salary);
+        if(salary){
+            console.log("salary dc dinh nghia");
+        }
+        else{
+            console.log("salary undified");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tong(a=0,b=0){
+            return a+b;
+        }
+        //goi ham
+        console.log(tong(5))
+        //fuction expression
+        let ten_bien=function(a,b){
+            return a*b;
+        }
+        console.log(ten_bien(5,7))
+        //function Arrow
+        let fuctionArrow = (a,b)=>a+b;
+        console.log(fuctionArrow(5,4));
+        //truong hop dung { }
+        let multiAndAdd=function(a,b){
+            let product=a*b;
+            let sum=a+b;
+            return product+sum;
+
+        }
+        console.log(multiAndAdd(4,6));
+        //arrow fuction
+        let multiArrow=(a,b)=>{
+            let product=a*b;
+            let sum=a+b;
+            return product+sum;
+        }
+        console.log(multiArrow(4,6));
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //hoisting
+        console.log("c la: "+c);
+        //khoi tao bien c
+        //khi khoi tao no se day c len dau ma khong gan gia tri 9
+        var c=9;//khoi tao la co bien va gia tri
+        //khi dung let thi se khong truy cap dc bien c
+        
+
+        //var: co pham vi la fuction-scope
+        function ex(){
+            if(true){
+                var y=20;//khoi tao y trong pham vi block scope
+                console.log("y trong block scope");
+            }
+            console.log("y trong pham vi function scope");
+        }
+        ex();
+
+        //js se hieu la
+        var y;
+        function ex(){
+            if(true){
+                y=20;//khoi tao y trong pham vi block scope
+                console.log("y trong block scope");
+            }
+            console.log("y trong pham vi function scope");
+        }
+        ex();
+
+        //let,const: co pham vi block-scpoe
+        function example(){
+            if(true){
+                let b=40;
+                console.log("b trong block scope");
+            }
+            // console.log("b trong phamvi ham"+b);
+        }
+        example();
+
+        var diemtoan;//var cung pham vi dc
+        var diemtoan;
+        
+    </script>
+</body>
+</html>

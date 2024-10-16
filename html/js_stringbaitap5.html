@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //tach so va chu
+        function tach(inputString){
+            let letter="";
+            let numbers="";
+            for(let i=0;i<inputString.length;i++){
+                let char=inputString[i];
+                if(isNaN(char)){//neu char trong vong lap i khong phai num thi day ki tu vo chuoi letter
+                    letter+=char;
+                }
+                else{//nguoc lai day ki tu vo chuoi number
+                    numbers+=char;
+                }
+            }
+            return {letter,numbers};
+        }
+        let input=prompt("nhap chuoi: ");
+        let result=tach(input);
+        alert(`chu: ${result.letter} so: ${result.numbers}`);
+        
+    </script>
+</body>
+</html>
