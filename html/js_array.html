@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,4,3,"nam",true,false];
+        console.log(arr);
+        //khai bao mang rong dun array constructor
+        let arr3=new Array(1,2,3,4,2,3,2,"dfsef");
+        console.log(arr3);
+        //tao mang co do dai xac dinh
+        let arrLenght=new Array(5);
+        console.log(arrLenght);
+        //truy xuat qua index
+        let arr5=[3,4,2,1];
+        console.log(arr5[3]);
+        //thuoc tinh length
+        //duyet mang
+        let arr7=[1,2,3,4,2];
+        for(let i=0;i<arr7.length;i++){
+            console.log(i);
+            arr7[i]*=2;
+        }
+        //sau khi nhan 
+        console.log(arr7);
+        //duyet cach 2 nhung khong sua doi gia tri mang
+        let arr8=[1,2,3,4,5];
+        for(let ele of arr8){
+            //kiem tra dieu kien duoc
+            if(ele%2===0){
+                console.log(ele);
+            }
+            
+
+        }
+        //method
+        //1.concat
+        let method1=[1,2,3];
+        let method2=[4,5,6];
+        let newArr=[method1.concat(method2)];
+        console.log(newArr);
+        //2.slice:sao chep mang
+        let method3=[3,4,2,3,2];
+        let method4=method3.slice().reverse();
+        console.log(method4);
+        //3.join
+        //khong truyen seperator
+        let method5=["nam","hung",1,2,3];
+        let string=method5.join();
+        console.log(string);
+        console.log(typeof string);
+        let method6=["nam","tam",1,2,3,4];
+        let string2=method6.join("$");
+        console.log(string2);
+        //4.splice()
+        let method7=[1,2,3,4,5];
+        method7.splice(2,1);
+        console.log(method7);
+        //xoa index 2 1 ki tu va thay 20 vao
+        method7.splice(2,1,20);
+        console.log(method7);
+        //them 0 phan tu va chen them so vao
+        method7.splice(2,0,45,67,89,90);
+        console.log(method7);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function timeSince(timestamp){
+
+            let now = new Date();
+            console.log("xem tu timestamp: "+now.getTime());
+            let timeDiff=now-timestamp;
+            let second=Math.floor(timeDiff/1000);
+            let minutes=Math.floor(second/60);
+            let hours=Math.floor(minutes/60);
+            let day=Math.floor(hours/24);
+            let months=Math.floor(day/30);
+            let year=Math.floor(months/12);
+
+            if(year>0){
+                return `Onl ${year} nam truoc`;
+            }
+            else if(months>0){
+                return `Onl ${months} thang truoc`;
+            }
+            else if(days>0){
+                return `Onl ${days} ngay truoc`;
+            }
+            else if(hours>0){
+                return `Onl ${hours} gio truoc`;
+            }
+            else if(minutes>0){
+                return `Onl ${minutes} phut truoc`;
+            }
+            else{
+                return `Onl ${second} giay truoc`;
+            }
+
+           
+        }
+        let timeOff=0;
+        console.log(timeSince(timeOff));
+
+    </script>
+</body>
+</html>

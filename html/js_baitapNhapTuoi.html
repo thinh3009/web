@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            let nhap=Number(prompt("nhap nam sinh: "));
+            while(nhap<0||!Number.isInteger(nhap)||isNaN(nhap)){
+                nhap=Number(prompt("sai nhap lai"));
+                
+            }   
+            console.log(nhap); 
+            let lay_nam= new Date()
+            let nam=lay_nam.getFullYear();
+            let tuoi=nam-nhap;
+            console.log("tuoi cua ban: "+tuoi);
+        </script>
+    </body>
+    </html>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body{
+    width: 500px;
+}
+input{
+    margin-left: 40px;
+}
+#input-tele{
+    margin-left: 12px;
+}
+#input-birth{
+    margin-left: 10px;
+}
+#input-age{
+    margin-left: 50px;
+}
+#select{
+    margin-left: 30px;
+}
+.content #label3{
+  
+    width: 90px;
+    display: inline-block;
+}
+#submit-btn{
+    margin-top: 30px;
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    margin-left: 0px;
+}
+
+.rq1{
+    color: red;
+}
+.boder-err{
+    border: 1px solid red;
+}

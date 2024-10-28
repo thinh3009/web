@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function countdown(minutes) {
+            alert("thoi gian lam bai la: " + minutes + "phut");
+            let second = minutes * 60;
+
+            let countdownInterval = setInterval(function () {
+                //than ham
+                //floor: lay phan nguyen
+                let minutesleft = Math.floor(second / 60);//65/60~1.083-->1
+                let secondleft = second % 60;//65%60=5
+                //formart second: hien so giay
+                let prefixSecondFormat = secondleft < 10 ? "0" : "";
+                console.log(`${minutesleft}:${prefixSecondFormat}${secondleft}`);
+
+                if (second <= 0) {
+                    clearInterval(countdownInterval);
+                    alert("het gio");
+
+                }
+                else {
+                    second--;
+                }
+
+            }, 1000)
+
+        }
+        let timeInput = Number(prompt("nhhap thoi gian lam bai"));
+        countdown(timeInput);
+
+
+
+    </script>
+</body>
+
+</html>

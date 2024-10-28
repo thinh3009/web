@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let helo=()=>{
+            console.log("hello");
+        };
+        //goi ham sau khoang tg
+        //goi ham
+        setTimeout(helo,3000);
+        
+        //goi ham
+        function xinChao(){
+            console.log("hello in function");
+        }
+        setTimeout(xinChao,3000);
+        //truyen truc tiep vao setTimeOut()
+        setTimeout(function xinChao(){
+            console.log("hello in function");
+        }, 3000);
+
+        //su dung voi tham so
+        let helloarr=(myname)=>{
+            console.log("hello"+myname);
+        };
+        //helloarr("thinh");
+        //setTimeout(helloarr,3000,"aha");
+        //4.khi muon huy qua trinh thuc hien ham
+        //b1. gan setTimeOut() vao 1 bien de luu gia tri
+        let time= setTimeout(helloarr,3000,"hai");
+        //clear time
+        clearTimeout(time);
+    </script>
+</body>
+</html>

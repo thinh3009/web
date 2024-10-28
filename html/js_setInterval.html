@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //thuc hien lap di lap lai sau khoang tg co dinh
+        function showNotification(){
+            console.log("heloo okok");
+        }
+        // setInterval(showNotification, 3000);
+        function update(){
+            let current=new Date();
+            console.log(current);
+        }
+        // setInterval(update,1000);
+
+        let counter=0;
+        //1.fuction deceration
+        function count(){
+            console.log(counter++);
+        }
+        // setInterval(count,2000);
+        //2.function expression
+        // let count=function(){
+        //     console.log(counter++);
+        // }
+        //3.arrow
+        //.....
+        //4.huy vong lap
+        let count2=()=>{
+            console.log(counter++);
+            if(counter===5){
+                clearInterval(stopInterval);
+            }
+        }
+        //1.gan bien nhan gia tri tra ve
+        let stopInterval=setInterval(count2,1000);
+
+
+ 
+    </script>
+</body>
+</html>
