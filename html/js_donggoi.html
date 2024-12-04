@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Wallet {
+            constructor(name,pin) {
+                this.name=name;
+                this.pin=pin;
+
+                this.balance=0;
+            }
+            //gui tien vao tai khoan
+            deposit(value){
+                this.balance+=value
+            }
+            //rut tien
+            withdraw(value){
+                if (value>this.balance){
+                    console.log("khong du tien");
+                    
+                }
+                else{
+                    this.balance-=value;
+                    console.log("rut thanh cong");
+                    
+                }
+            }
+
+        }
+        const w=new Wallet("bank","123345");
+        console.log(w.balance);
+        w.deposit(1000);
+        console.log(w.balance);
+        w.withdraw(500);
+        console.log(w.balance);
+        //xem tai khoan
+        console.log(w.balance);
+        console.log(w.pin);
+        
+        
+        
+        
+        
+        //gui tien
+
+    </script>
+</body>
+</html>

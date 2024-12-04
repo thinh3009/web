@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/dom_searchBox.js" defer></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+            background-color: aqua;
+            color: blue;
+            max-width: 80vw;
+            border-radius: 50px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+
+        }
+        body{
+            background-image: linear-gradient(90deg,#8067f1,#6d56);
+        }
+        .search-group{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search{
+            position: relative;
+            height: 50px;
+
+        }
+        .search .input{
+            border-radius: 18px;
+            border: 0;
+            background-color: white;
+            font-size: 18px;
+            padding: 15px;
+            height: 50px;
+            /* ti nua code js dieu khien do rong */
+            width: 50px;
+            transition: 0.7s;
+        }
+        .btn{
+            background-color: white;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top:0;
+            left: 0;
+           
+
+        }
+        .search.active .input{
+            width: 350px;
+            padding-left: 57px;
+            
+        }
+        .btn:focus,input:focus{
+            outline: none;
+        }
+        .search.active img{
+            background-color: blue;
+            width: 40px;
+            height: 40px;
+            transition: 0.7s;
+        }
+    </style>
+</head>
+<body>
+    <h1>search bar</h1>
+    <div class="search-group">
+        <div class="search ">
+            <input type="text" class="input" id="" placeholder="nhap noi dung">
+            <button class="btn" >
+                <img src="../ico/Ellipse_page3.svg" alt="">
+            </button>
+            
+        </div>
+    </div>
+</body>
+</html>

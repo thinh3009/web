@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+        tuogn tac voi nguoi dung
+        name va id thuong trung nhau
+        form mac dinh truyen du lieu len server bang method get
+        chi khoang 4000 ki tu khi dung get
+        voi post: no se ma hoa du lieu khong hien thi len address
+
+    </pre>
+    <form method="post" action="getdata.php">
+        <!-- dong khung lai -->
+        <fieldset>
+            <legend>register:</legend>
+            <label for="pass">password:</label>
+            <!-- maxlength vs minlength: chieu dai toi da va toi thieu cua char -->
+             <!-- require: yeu cau nhap thong tin -->
+            <input type="text" name="user" id="user" placeholder="enter user name" minlength="3" list="danhsach" required >
+            <!-- auto complete -->
+            <datalist id="danhsach">
+                <option value="thinh"></option>
+                <option value="thinh"></option>
+                <option value="thinh"></option>
+            </datalist>
+            <label for="user">username:</label>
+            <input type="password" name="pass" id="pass">
+
+            <input type="submit" value="send data to sever">
+            <input type="reset" value="reset data">
+            
+            <input type="checkbox" name="amnhac" id="amnhac">
+            <label for="amnhac">music</label>
+
+            
+            <input type="radio" name="check" id="check">
+            <label for="check">okok</label>
+
+            <select name="choose" id="choose">
+                <option value="male">ok</option>
+                <option value="male">ok</option>
+                <option value="male">ok</option>
+            </select>
+
+            <input type="file" name="input" id="input" accept=".png,.gif,.jpg" multiple>
+
+            <input type="text" name="number" id="number" pattern="^[0-9]+$" title="must be number">
+            <input type="submit" value="send data">
+            <button>submit</button>
+            
+
+            <input type="button" value="click me">
+
+
+        </fieldset>
+
+
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //dinh nghia key value cho object ngan gon hon
+        //dinh nghia method cho object
+        //dinh nghia key cho object duoiw dang bien
+        // var name='js';
+        // var price=1000;
+        // var course={
+        //     name,
+        //     price,
+        //     getName(){
+        //         return name;
+        //     }
+        // };
+        // console.log(course);
+
+        var fieldName = 'name';
+        var fieldPrice = 'price';
+        const course = {
+            [fieldName]: 'js',
+            [fieldPrice]: 1000
+        };
+        console.log(course);
+
+        //rest syntax
+        function logger({name,price,...rest}) {
+            console.log(name);
+            console.log(price);
+            
+            console.log(rest);
+            
+            
+           
+
+        }
+        logger({
+            name:'js',
+            price:1000,
+            decription:'drcition',
+            img:'1234'
+        });
+
+        function logger2([a,b,...rest]) {
+            console.log(a);
+            console.log(b);
+            console.log(rest);
+            
+        }
+        logger2([2,6,34,4,6,3,7,3]);
+        //spread(...):hop nhat mang object
+
+        var arr=['js','python','c#'];
+        var arr2=['c++','go'];
+        var arr3=[...arr2,...arr];
+        console.log(arr3);
+
+        var object1={
+            name:'js'
+        };
+        var object2={
+            price:1000
+        }
+        var object3={
+            ...object1,
+            ...object2
+        }
+        console.log(object3);
+        //rest(...):truyen tham so cho ham
+        var arr4=['js','php','ruby'];
+        function logger(...rest){
+            for(var i=0;i<rest.length;i++){
+                console.log(rest[i]);
+                
+            }
+            
+        }
+        logger(...arr4);//spread()
+        
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Wallet {
+            //cai dat protected
+            #pin;
+            #balance;
+            #isPin=false;
+            constructor(name,pin) {
+                this.name=name;
+                this.#pin=pin;
+
+                this.#balance=0;
+            }
+            //gui tien vao tai khoan
+            deposit(value){
+                if(!this.#isPin){
+                    console.log("kiem tra lai!!");
+                    return 0;
+                }
+                this.#balance+=value
+            }
+
+
+            //private method
+            #validatePin(pin){
+                return this.#pin===pin;
+            }
+            //public method
+            enterPin(pin){
+                if(this.#validatePin(pin)){
+                    this.#isPin=true;
+                }
+                else{
+                    console.log("invalid pin");
+                    
+                }
+            }
+
+            //rut tien
+            withdraw(value){
+                if(!this.#isPin){
+                    console.log("kiem tra lai!!");
+                    return 0;
+                }
+                if (value>this.#balance){
+                    console.log("khong du tien");
+                    
+                }
+                else{
+                    this.#balance-=value;
+                    console.log("rut thanh cong");
+                    
+                }
+            }
+            //getter 
+            get balance(){
+                if(!this.#isPin){
+                    console.log("kiem tra lai");
+                    return;
+                }
+                return this.#balance;
+            }
+
+        }
+        //nhap ma pin
+       
+        const w=new Wallet("bank","12345");
+        w.enterPin("1234");
+        // console.log(w.#balance);
+        w.deposit(1000);
+        // console.log(w.#balance);
+        w.withdraw(500);
+        // console.log(w.#balance);
+        //xem tai khoan
+        // console.log(w.#balance);
+   
+        
+        console.log(w.balance);
+        
+        
+        
+        
+        //gui tien
+
+    </script>
+</body>
+</html>

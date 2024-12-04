@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">//chuyen code js sang babel
+        // const courses = [
+        //     {
+        //         name: 'html,css'
+        //     },
+        //     {
+        //         name: 'reposive'
+        //     },
+        //     {
+        //         name: 'reactJS'
+        //     }
+        // ];
+        // const Reactul = <ul>
+        //     {courses.map(
+        //         (course,index) => 
+        //         <li key={index}>{course.name}</li>
+        //     )}
+        // </ul>
+        // const domReact = ReactDOM.createRoot(
+        //     document.querySelector("#root")
+        // );
+        // domReact.render(Reactul);
+        // const jsx=(
+        //     //fragment:dung de om nhieu element voi nhau
+        //     <React.Fragment>
+        //         <h1>headng1</h1>
+        //         <h2>headng2</h2>    
+        //     </React.Fragment>
+        // )
+
+        //dung react khi khong co babel
+        const jsx=React.createElement(
+            React.Fragment,
+            null,
+            React.createElement('h1',null,'heading'),
+        )
+        const renderReact=document.querySelector("#root");
+        const root=ReactDOM.createRoot(renderReact);
+        root.render(jsx);
+    </script>
+</body>
+
+</html>

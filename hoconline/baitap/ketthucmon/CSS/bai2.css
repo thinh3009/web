@@ -1,0 +1,216 @@
+body {
+    height: 1000px;
+    width: 1000px;
+
+}
+
+form {
+    border: 2px solid red;
+    font-size: 20px;
+    border-radius: 40px;
+    height: 750px;
+    width: 1500px;
+    background-color: #c05217;
+
+}
+
+form p:nth-child(1) {
+    text-align: center;
+    font-size: 30px;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 30px;
+    margin-top: auto;
+
+}
+
+.err-box {
+    border: 1px solid red;
+}
+
+.err-text {
+    color: red;
+}
+
+input,
+select {
+    width: 200px;
+    height: 30px;
+}
+
+
+/* mail -pass */
+form #lbl-pass {
+    margin-left: 200px;
+}
+
+form .message {
+    margin-left: 580px;
+}
+
+/* address */
+form #lbl-add,
+#input-add {
+    margin-bottom: 30px;
+}
+
+form #input-add {
+    margin-left: 10px;
+
+}
+
+form #lbl-add2 {
+    margin-left: 70px;
+}
+
+form #lbl-city {
+    margin-left: 100px;
+}
+
+form #lbl-zip {
+    margin-left: 310px;
+}
+
+form select {
+    margin-left: 30px;
+}
+
+form #btn-sign {
+    margin-top: 30px;
+    margin-left: 650px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+form #lbl-check,
+#check {
+    margin-top: 40px;
+}
+
+form #lbl-check {
+    margin-left: -80px;
+}
+
+/* header sign up */
+form p:nth-child(1) {
+    -webkit-animation: color-change-3x 4s ease-out infinite alternate both;
+    animation: color-change-3x 4s ease-out infinite alternate both;
+}
+
+@-webkit-keyframes color-change-3x {
+    0% {
+        background: #19dcea;
+    }
+
+    50% {
+        background: #b22cff;
+    }
+
+    100% {
+        background: #ea2222;
+    }
+}
+
+@keyframes color-change-3x {
+    0% {
+        background: #19dcea;
+    }
+
+    50% {
+        background: #b22cff;
+    }
+
+    100% {
+        background: #ea2222;
+    }
+}
+
+/* animation button */
+#btn-sign{
+    background-color: yellow;
+    font-size: 20px;
+}
+#btn-sign:hover {
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+    cursor: pointer;
+    
+}
+
+@-webkit-keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes heartbeat {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: center center;
+        transform-origin: center center;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        -webkit-transform: scale(0.91);
+        transform: scale(0.91);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        -webkit-transform: scale(0.98);
+        transform: scale(0.98);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        -webkit-transform: scale(0.87);
+        transform: scale(0.87);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}

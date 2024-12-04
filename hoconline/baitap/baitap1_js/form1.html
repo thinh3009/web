@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/form1.js" defer></script>
+    <link rel="stylesheet" href="./css/style1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="f1">
+        <fieldset>
+
+            <legend style="width: fit-content;">
+                Contact Details
+
+            </legend>
+
+
+            <div class="content">
+                <label for="">Name</label>
+                <input type="text" id="input-name" name="input-name" >
+                <span for="" class="rq1" id="err-mes"></span>
+                <br />
+                <label for="">Telephone</label>
+                <input type="text" id="input-tele" name="input-tele">
+                <br />
+                <label for="">Email</label>
+                <input type="text" id="input-mail" name="input-mail">
+                <span for="" class="rq1" id="err-mail"></span>
+            </div>
+
+
+
+
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend style="width: fit-content;">
+                Personal Information
+
+            </legend>
+
+            <div class="content">
+                <label for="" id="label1">Birth Date</label>
+                <input type="text" placeholder="dd/mm/yy" id="input-birth" name="input-birth">
+                <span for="" class="rq1" id="err-birth"></span>
+                <br />
+                <label for="">Age</label>
+                <input type="text" id="input-age" name="input-age">
+                <span for="" class="rq1" id="err-age"></span>
+                <br />
+                <label for="" id="label2">Gender</label>
+                <select name="gender" id="select">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Other">Other</option>
+
+                </select>
+                <br />
+                <label for="" id="label3">When did you first know you wanted to be a zoo-keeper?</label>
+                <textarea name="message" id="input-text" rows="6"></textarea>
+                <span for="" class="rq1" id="err-text"></span>
+
+
+            </div>
+
+
+
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend style="width: fit-content;">
+                Pick Your Favorite Animals
+
+            </legend>
+
+
+            <div class="content">
+                <input type="checkbox" value="Animal">
+                <label for="animal1"> Zebra</label>
+                <input type="checkbox" value="Animal">
+                <label for="animal2"> Elephant</label>
+                <input type="checkbox" value="Animal">
+                <label for="animal3"> Cat</label>
+                <input type="checkbox" value="Animal">
+                <label for="animal4"> Wildebeest</label>
+                <input type="checkbox" value="Animal">
+                <label for="animal5"> Anaconda</label>
+                <input type="checkbox" value="Animal">
+                <label for="animal6"> Pigeon</label>
+                <input type="checkbox" value="Animal">
+                <label for="animal7"> Human</label>
+                <input type="checkbox" value="Animal">
+                <label for="animal8"> Crab</label>
+            </div>
+
+
+
+        </fieldset>
+        <input type="submit" value="button submit" id="submit-btn">
+    </form>
+</body>
+
+</html>

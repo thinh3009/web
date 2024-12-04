@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //rest: tham số đại diện cho những tham số không được khai báo.
+        function num(num1,num2,...vv){
+            console.log(num1);
+            console.log(num2);
+            console.log(vv);
+            
+        }
+        num(1,2,3,4,5,6,7,8);
+        //rest 2
+        function objectRest(name,birth,age,...orther){
+            console.log(name);
+            console.log(birth);
+            console.log(age);
+            
+            console.log(orther);
+            
+            
+        }
+        objectRest(["thinh","2002","12","dep trai","cuto"]);
+
+        //spread
+        const arr1=["thinh","nam","huy","teo"];
+        const arr2=[...arr1,"my","tien"];
+        console.log(arr2);
+        //spread voi object
+        const object1={
+            name:"thinh",
+            id:"6969",
+            classId:"123ad"
+        }
+        const object2={
+            dateOfBirth:"30/09/2002",
+            address:"2 ngo gia tu"
+        }
+        const object3={
+            ...object1,
+            ...object2
+        }
+        console.log(object3);
+        
+        //destructuring: cho phép chúng ta dễ dàng sử dụng các giá trị phần tử của Array hoặc Object
+        const arrDes=[1,2,3,4,5];
+        const [a,b]=arrDes;
+        console.log(b);
+        console.log(arrDes);
+        
+        //destructuring voi object
+        const myObject={
+            name:"thinh ne",
+            age:4
+        }
+        const {name,age}=myObject;
+        console.log(name);
+        
+    </script>
+</body>
+</html>

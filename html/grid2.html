@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>91.4</title>
+    <style>
+        .box1,.box4,.box5{
+            background-color: aqua;
+
+        }
+        .box2,.box3{
+            background-color: blue;
+        }
+        .box{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+
+        }
+        .container{
+            display: grid;
+            gap: 5px 10px;
+            grid-template-areas: 
+            "header header leftbox leftbox leftbox " 
+            "header header content content leftbox3 "
+            "footer footer content content leftbox4";
+        }
+        .box1{
+            grid-area: header;
+
+        }
+        .box2{
+            grid-area: leftbox;
+
+        }
+        .box3{
+            grid-area: leftbox3;
+        }
+        .box4{
+            grid-area: leftbox4;
+        }
+        .box5{
+            grid-area: content;
+        }
+        .box6{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">item 1</div>
+        <div class="box box2">item 2</div>
+        <div class="box box3">item 3</div>
+        <div class="box box4">item 4</div>
+        <div class="box box5">item 5</div>
+        <div class="box box6">item 6</div>
+    </div>
+</body>
+</html>

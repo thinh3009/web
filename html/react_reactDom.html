@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="root"></div>
+    <div id="h1-tag"></div>
+    <div id="ul-tag"></div>
+    <script>
+         //react
+         const React1 = React.createElement(
+            'div',
+            { className: 'post-item' },
+            React.createElement('h2', {title:'hoc tai f8'}, 'hoc react tai f8'),
+            React.createElement('p', null, 'hoc react tu co ban den nang cao')
+        );
+        console.log(React1);
+        //get root
+        const root=document.getElementById("root");
+        //react dom 17
+        // ReactDOM.render(React1,root);
+
+        //baitap
+        const Reacth1=React.createElement(
+            'h1',
+            {
+                title:"hello"
+            },"hello guys"
+        );
+        const Reactul=React.createElement(
+            'ul',
+            null,
+            React.createElement('li',null,'js'),
+            React.createElement('li',null,'reactjs')
+        )
+        //get tag
+        const tagH1=document.getElementById('h1-tag');
+        const tagul=document.getElementById('ul-tag');
+        //render-->react17
+        // ReactDOM.render(Reacth1,tagH1);
+        // ReactDOM.render(Reactul,tagul);
+
+
+
+        //render-->react18
+        const container=document.getElementById('root');
+        const root1=ReactDOM.createRoot(container);
+        root1.render(React1);
+        
+    </script>
+</body>
+</html>

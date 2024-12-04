@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/dom_button.js" defer></script>
+    <style>
+        body{
+            box-sizing: border-box;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid red;
+        }
+        .btn{
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            margin-left: 40%;
+            border-radius: 50px;
+            
+            cursor: pointer;
+            position: relative;
+            /* overflow */
+            overflow: hidden;
+            background-color: blue;
+        }
+        .circle{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            transform: translate(-50%,-50%) scale(0);
+            animation: scale 0.5s ease-out;
+        }
+        @keyframes scale{
+            to{
+                transform: translate(-50%,-50%) scale(3);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Event JS - Project Button</h1>
+    <div class="parent">
+        <button class="btn"> click
+            <span class="circle"></span>
+        </button>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM</title>
+</head>
+
+<body>
+    <!-- cu phap BEM -->
+    <!-- 1.block: .header,.footer,.card,.card-list 
+      
+          2.element
+          block__element: footer__logo, footer_desc, card_image
+
+          3.modifier
+          block__element--modifier:card__image--large
+     -->
+    <!-- vd1 -->
+    <div class="card">
+        <div class="card__image"></div>
+        <div class="card__titles"></div>
+        <div class="card__desc"></div>
+        <div class="card__button">
+            <div class="card__button--primary"></div>
+            <div class="card__button--secondary"></div>
+        </div>
+    </div>
+
+    <!-- vd2 -->
+    <div class="card-list">
+        <!-- item1 -->
+        <div class="card-item">
+            <div class="card-item__image"></div>
+            <div class="card-item__title"></div>
+            <div class="card-item__desc"></div>
+            <div class="card-item__button">
+                <div class="card-item__button--primary"></div>
+                <div class="card-item__button--secondary"></div>
+            </div>
+        </div>
+
+        <!-- item2 -->
+        <div class="card-item">
+            <div class="card-item__image"></div>
+            <div class="card-item__title"></div>
+            <div class="card-item__desc"></div>
+            <div class="card-item__button">
+                <div class="card-item__button--primary"></div>
+                <div class="card-item__button--secondary"></div>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="block__element1">
+            <div class="block__element2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

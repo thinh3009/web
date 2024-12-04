@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,.box4,.box5{
+            background-color: green;
+        }
+        .box3,.box2{
+            background-color: blue;
+        }
+        .box{
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            display: grid;
+            /* gia tri mac dinh cua cot va hang */
+            /* grid-template-columns: auto;
+            grid-template-rows: auto; */
+            /* grid-template-columns: 100px calc(100% - 100px);
+            grid-template-rows: 50px 100px 50px; */
+            /* 4.gap */
+            /* quy dinh gap dong */
+            /* row-gap:50px ; */
+            /* quy dinh gap cot */
+            /* column-gap: 15px; */
+            /* viet tat : gap(hang/cot) */
+            /* gap : 20px 50px; */
+
+            /* repeat:dung de lap lai */
+            /* grid-template-columns: 100px 50px 50px ; */
+            /* grid-template-columns: 100px repeat(3,50px);
+            grid-template-rows: 50px repeat(4,20px); */
+
+            /*6.chia theo trong so ti le  */
+            /* grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 2fr 4fr; */
+
+            /* 7.gia tri auto */
+            /*khong duoc dung cho rows*/
+            /* grid-template-columns: 100px auto;  */
+
+            /* gia tri min max: neu co toi muc toi da thi no se giam toi muc toi thieu */
+            grid-template-columns: minmax(150px,300px) minmax(200px,auto);
+            grid-template-rows: repeat(2,minmax(50px,80px));
+            grid-auto-rows:50px;
+
+            
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">Item 1</div>
+        <div class="box box2">Item 2</div>
+        <div class="box box3">Item 3</div>
+        <div class="box box4">Item 4</div>
+        <div class="box box5">Item 5</div>
+        <div class="box box1">Item 1</div>
+        <div class="box box2">Item 2</div>
+        <div class="box box3">Item 3</div>
+        <div class="box box4">Item 4</div>
+        <div class="box box5">Item 5</div>
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class School{
+            constructor(id,name,year){
+                this.id=id;
+                this.name=name;
+                this.year=year;
+            }
+            //phuong thuc lop school
+            calcAge(currentYear){
+                return currentYear-this.year;
+            }
+        }
+        //lop student ke thua (co them thuoc tinh va phuong thuc)
+        class Student extends School{
+            constructor(id,name,year,major){
+                super(id,name,year);
+                this.major=major;
+            }
+            //phuong thuc lop student
+            study(){
+                console.log(`${this.name} is studying ${this.major}`);
+                
+            }
+        }
+
+        //tao ra doi tuong cua lop school
+        p1=new School("per23r","thinh",2002);
+        console.log(p1.id);
+        console.log(p1.year);
+        console.log(p1.name);
+        console.log(p1.calcAge(2024));
+        //tao doi tuong cho class con
+        const s1=new Student("per24r","nam",1999,"information technology");
+        console.log(s1.id);
+        console.log(s1.year);
+        console.log(s1.name);
+        console.log(s1.calcAge(2024));
+        console.log(s1.major);
+        
+        console.log(s1.study());
+        console.log(s1);
+        
+        
+    </script>
+</body>
+</html>

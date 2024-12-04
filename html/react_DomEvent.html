@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        
+
+
+        //course item
+
+      
+
+        function App() {
+            return (
+                <div>
+                    <button 
+
+                        onDoubleClick={()=>console.log(Math.random())}
+                        
+                    >click</button>    
+                </div>
+
+            )
+        }
+        const app=(
+            <App/>
+        )
+        const renderR=document.querySelector("#root");
+        const root=ReactDOM.createRoot(renderR);
+        root.render(app);
+    </script>
+</body>
+
+</html>

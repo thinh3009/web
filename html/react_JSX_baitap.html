@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">//chuyen code js sang babel
+
+        //function component
+        function PostItem() {
+            return (
+                <div className="post-list">
+                    <div className="post-item">
+                        <img src="/img/anh.jpg" alt="c# hoc lai tu dau" />
+                        <h2 className="post title">c# dotnet tuong tac excel</h2>
+                        <p className="post-desc">ban co ken thuc ve c#</p>
+                        <p className="post-published">2 ngay truoc</p>
+                    </div>
+                </div>
+
+            )
+        }
+        const app = (
+
+            
+            <PostItem/>
+     
+        )
+        const renderReact = document.querySelector("#root");
+        const root = ReactDOM.createRoot(renderReact);
+        root.render(app);
+    </script>
+</body>
+
+</html>

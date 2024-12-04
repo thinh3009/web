@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        const course = [
+
+            {
+                "icon": "https://salt.tikicdn.com/ts/upload/96/76/a3/16324a16c76ee4f507d5777608dab831.png",
+                "icon_height": 20,
+                "icon_width": 20,
+                "text": "100% hàng thật"
+            },
+            {
+                "icon": "https://salt.tikicdn.com/ts/upload/11/09/ec/456a2a8c308c2de089a34bbfef1c757b.png",
+                "icon_height": 20,
+                "icon_width": 20,
+                "text": "Freeship mọi đơn"
+            },
+            {
+                "icon": "https://salt.tikicdn.com/ts/upload/0b/f2/19/c03ae8f46956eca66845fb9aaadeca1e.png",
+                "icon_height": 20,
+                "icon_width": 20,
+                "text": "Hoàn 200% nếu hàng giả"
+            },
+            {
+                "icon": "https://salt.tikicdn.com/ts/upload/3a/f4/7d/86ca29927e9b360dcec43dccb85d2061.png",
+                "icon_height": 20,
+                "icon_width": 20,
+                "text": "30 ngày đổi trả"
+            },
+            {
+                "icon": "https://salt.tikicdn.com/ts/upload/87/98/77/fc33e3d472fc4ce4bae8c835784b707a.png",
+                "icon_height": 20,
+                "icon_width": 20,
+                "text": "Giao nhanh 2h"
+            },
+            {
+                "icon": "https://salt.tikicdn.com/ts/upload/6a/81/06/0675ef5512c275a594d5ec1d58c37861.png",
+                "icon_height": 20,
+                "icon_width": 20,
+                "text": "Giá siêu rẻ"
+            }
+        ];
+
+
+
+        //course item
+
+        function CourseItem({course}) {
+            return (
+                <ul>
+                    <li id="icon">{course.icon}</li>
+                    <li id="href">{course.icon_height}</li>
+                    <li id="title">{course.icon_width}</li>
+                    <li id="title">{course.text}</li>
+                </ul>
+            );
+        }
+
+        function App() {
+            return (
+                //map lap lai nguyen cai mang va in ra tung object
+                <div>
+                    
+                    {course.map(courses=> (
+                        
+                        <CourseItem
+                           
+                            course={courses}
+                        />
+
+
+                    ))}
+                </div>
+                
+
+            )
+        }
+        const app=(
+            <App/>
+        )
+        const renderR=document.querySelector("#root");
+        const root=ReactDOM.createRoot(renderR);
+        root.render(app);
+    </script>
+</body>
+
+</html>

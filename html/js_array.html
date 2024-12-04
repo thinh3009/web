@@ -67,6 +67,80 @@
         method7.splice(2,0,45,67,89,90);
         console.log(method7);
 
+
+        //method spread
+        let M1= [1,2,3];
+        let M2=[...M1];
+        console.log("mang m2: "+M2);
+        //truyen doi so vao ham
+        function sum(a,b,c){
+            return a+b+c;
+        }
+        let numbers=[1,2,3];
+        let results=sum(...numbers);//tach phan tu ra va tinh
+        console.log(results);
+        //ket hop mang
+        let a1=[1,2,3];
+        let a2=[4,5,6];
+        let combinedArr=[...a1,...a2];
+        console.log(combinedArr);
+        //tao mang them phan tu
+        let M3=[1,2,3];
+        let M4=[...M3,69];
+        console.log(M4);
+        //chuyen ky tu thanh mang
+        let myName="thinh";
+        let chars=[...myName];
+        console.log(chars)
+        //method sort
+        let mang1=["b","a","c"];
+        //xem ki tu tu trong bang ma
+        console.log("b".charCodeAt());
+        for(let e in mang1){
+            console.log(e);
+            console.log(`${e} cos ma: ${e.charCodeAt()}`);
+        }
+        let sortMang1=mang1.sort();
+        console.log(sortMang1);
+        //so sanh so
+        let mang3=[10000,1,9];
+        let sortmang3=mang3.sort();
+        console.log(sortmang3);
+        //dung ham so sanh compareFunciton
+        let mang4=[9,3,5,4];
+        //truoc khi sap xep
+        console.log(mang4);
+        //sap xep tang dan
+        let sortMang4=mang4.sort((a,b)=>a-b);
+        console.log(sortMang4);
+        //sap xep giam dan
+        let sortMang5=mang4.sort((a,b)=>b-a);
+        console.log(sortMang5)
+        //method reduce()
+        let ma1=[1,2,3];
+        //thuc hien tinh tong
+        let tinhtong=0;
+        for(let i of ma1){
+            
+            tinhtong+=i;
+            
+        }
+        console.log(tinhtong);
+        //khi dung reduce()
+        let tinhtong2=ma1.reduce(
+            //
+            (accumulator,currentValue,currentIndex,array)=>{
+                return accumulator+currentValue;
+            },
+            //tham so thu 2 la initialValue
+            5
+        );
+        console.log(tinhtong2);
+        //rut gon
+        let tinhtong3=ma1.reduce((accumulator,currentValue)=>accumulator+currentValue,0);
+        console.log(tinhtong3);
+        //method filter()
+        
     </script>
 </body>
 </html>

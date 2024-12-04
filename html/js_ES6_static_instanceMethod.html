@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class circle {
+            constructor(radius) {
+                this.radius = radius;
+                
+
+            }
+            //instance method
+            draw() {
+                console.log("phuong thuc draw");
+
+            }
+            static calcArea(radius){
+                return Math.PI*radius*radius
+            }
+        }
+        const c1=new circle(10);
+        const c2=new circle(5);
+        console.log(c1.draw());
+        console.log(c2.draw());
+
+        //goi phuong thuc static method
+        console.log(circle.calcArea(4));
+        //vi du static medthod
+        a=-10
+        console.log(Math.abs(a));
+        
+    </script>
+</body>
+
+</html>

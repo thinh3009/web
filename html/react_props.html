@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+    <script type="text/babel">//chuyen code js sang babel
+
+        //props gom 2 loai
+        //prop component: la may cai ham chua may cai the
+
+        //prop element:la may cai the
+
+
+        //function component
+        //truyen doi so props de truy cap vao tu cac component
+        // function PostItem(props) {
+        //     if(typeof props.hamCallBack==='function'){
+        //         props.hamCallBack(Math.random());
+        //     }
+
+
+
+        //     return (
+
+
+        //         <div className="post-list">
+        //             <div className="post-item">
+        //                 <label htmlFor="email">email</label>
+        //                 <input type="text"/>
+        //                 <img src={props.image} alt={props.title} />
+        //                 <h2 className="post title">{props.title}</h2>
+        //                 <p className="post-desc">{props.decription}</p>
+        //                 <p className="post-published">{props.public}</p>
+        //             </div>
+        //         </div>
+
+        //     );
+        // }
+
+
+        //su dung destructuring
+        function PostItem({image,
+            title,
+            decription,
+            publicAt}) 
+        {
+
+
+
+
+            return (
+
+
+                <div className="post-list">
+                    <div className="post-item">
+                        <label htmlFor="email">email</label>
+                        <input type="text" />
+                        <img src={image} alt={title} />
+                        <h2 className="post title">{title}</h2>
+                        <p className="post-desc">{decription}</p>
+                        <p className="post-published">{publicAt}</p>
+                    </div>
+                </div>
+
+            );
+        }
+
+
+
+        //app
+        function App() {
+            return (
+                //dat props cho component: quy uoc dat tu do
+                <div id="wrap">
+                    <PostItem
+
+                        image="/img/anh.jpg"
+                        title="c# dotnet tuong tac excel"
+                        decription="ban co ken thuc ve c#"
+                        publicAt="1 ngay truoc"
+
+                    />
+                    <PostItem
+
+                        image="/img/anh.jpg"
+                        title="6969c# dotnet tuong tac excel"
+                        decription="6969ban co ken thuc ve c#"
+                        publicAt="69691 ngay truoc"
+                    />
+                    <PostItem
+
+                        image="/img/anh.jpg"
+                        title="12345c# dotnet tuong tac excel"
+                        decription="12345ban co ken thuc ve c#"
+                        publicAt="123451 ngay truoc"
+                    />
+                </div>
+            );
+
+        }
+        const app = (
+            <App />
+        )
+
+        const renderReact = document.querySelector("#root");
+        const root = ReactDOM.createRoot(renderReact);
+        root.render(app);
+    </script>
+</body>
+
+</html>

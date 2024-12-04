@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class School {
+            constructor(name,id,year,score) {
+                this.name=name;
+                this.id=id;
+                this.year=year;
+                this._score=score;//protected: khong dc truy cap
+            }
+            calcAge(currentYear){
+                return currentYear-this.year;
+            }
+            //Getter cho score
+            get score(){
+                return this._score
+            }
+            //setter 
+            set score(value){
+                //them bieu thuc logic de kiem tra
+                if(value>=0 && value<=100){
+                    this.score=value;
+                }
+                else{
+                    console.log("diem so khong hop le");
+                    
+                }
+            }
+
+        }
+
+        //tao doi tuong
+        const join=new School("p123123","bui duc thinh",2002,10);
+        console.log(join.id);
+        console.log(join.name);
+        console.log(join.year);
+        console.log(join._score);//khong nen truy cap
+        //dung getter
+        console.log(join.score);
+        //dung setter
+        join.score=250;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Shape{
+            constructor(name){
+                this.name=name;
+            }
+            caclArea(){
+                return 0;
+            }
+        }
+        class Square extends Shape{
+            constructor(name,side){
+                super(name);
+                this.side=side;
+            }
+            //override method dien tich
+            caclArea(){
+                return this.side*this.side;
+            }
+        }
+        class Rectange extends Shape{
+            constructor(name,width,height){
+                super(name);
+                this.height=height;
+                this.width=width;
+            }
+            caclArea(){
+                return this.height*this.width;
+            }
+        }
+
+        n1=new Shape("hinh vuong");
+        n2=new Shape("hinh chu nhat");
+        vuong=new Square("hinh vuong",4);
+        chunhat=new Rectange("chu nhat",4,6);
+        console.log(`dien tich hinh ${vuong.name} la: ${vuong.caclArea()}`);
+        console.log(`dien tich hinh ${n2.name} la: ${chunhat.caclArea()}`);
+        
+    </script>
+</body>
+</html>

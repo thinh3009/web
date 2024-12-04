@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,
+        .box4,
+        .box5 {
+            background-color: green;
+        }
+
+        .box3,
+        .box2 {
+            background-color: blue;
+        }
+
+        .box {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 100px repeat(2, 50px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 15px;
+        }
+
+        /* .box1{
+            grid-row-start: 1;
+            grid-row-end:3 ;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .box5{
+            grid-column-start:2 ;
+            grid-column-end: 4;
+        } */
+        .box1 {
+            /* grid-row-start: 1;
+            grid-row-end: -1; */
+            /* viet tat grid-row: (start/end) */
+            grid-row: 1/-1;
+            
+            /* grid-area: (rowStart/columStart/rowEnd/columnEnd) */
+
+        }
+        .box2{
+            /* span: dung de tang them dong va cot */
+            grid-column:  span 2;
+            grid-row:span 2;
+        }
+
+        
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">Item 1</div>
+        <div class="box box2">Item 2</div>
+        <div class="box box3">Item 3</div>
+        <div class="box box4">Item 4</div>
+        <div class="box box5">Item 5</div>
+
+
+    </div>
+</body>
+
+</html>

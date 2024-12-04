@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let m=[];
+        let mang;
+        while(true){
+            mang=Number(prompt("nhap so luong phan tu"));
+            if(Number.isInteger(mang)&&mang>0){
+                break;
+            }
+        }
+        for(let i =0;i<mang;i++){
+            let input=Number(prompt("nhap phan tu thu"+(i+1)+": "));
+            m.push(input);//day vao mang m
+        }
+        console.log(m);*/
+        //bai tap2
+        let mang1=[];
+        let nhap;
+        while(true){
+            nhap=Number(prompt("nhap so luong phan tu"));
+            if(Number.isInteger(nhap)&&nhap>0){
+                break;
+            }
+        }
+        
+      
+        for(let j =0;j<nhap;j++){
+            input=Number(prompt(`nhap phan tu thu ${j+1}`));
+            mang1.push(input);
+            
+        }
+        
+        console.log("mang: "+mang1);
+        //tinh tong
+        let tong=mang1.reduce((a,b)=>a+b,0);
+        console.log(tong);
+        let sapXepTang=mang1.sort((a,b)=>a+b);
+        console.log("mang tang: "+sapXepTang);
+        //dao nguoc mang
+        let daoNguoc=mang1.slice().reverse();
+        console.log("mang dao nguoc: "+daoNguoc);
+        //kiem tra ptu trong mang
+        let soBatKy=Number(prompt("nhap so bat ky trong mang: "));
+        let indexArr=[];
+        for(let i =0;i<mang1.length;i++){
+            if(soBatKy===mang1[i]){
+                indexArr.push(i);//xuat index vao 1 cai mang moi
+            }
+
+        }
+        
+        //kien tra
+        if(indexArr.length===0){
+            console.log("khong co so nao");
+        }
+        else{
+            console.log("so nay o vi tri thu: "+indexArr);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //dung destructring voi mang
+        var arr=['js','python','go'];
+        var [a,...rest]=arr;//khai bao
+        console.log(a);
+        console.log(rest);
+
+        //dung voi object
+        var course={
+            name:'js',
+            price:1000,
+            img:'img new',
+            children:{
+                name:'react'
+            }
+        };
+        var {name:parentName,children:{name:childrenName}}=course;
+        console.log(childrenName);
+        console.log(parentName);
+        //dung khi co decription va khong co decription
+        var course2={
+            name12:'js',
+            price:1000,
+            img:'img new',
+            decription:'this is dcr'
+            
+           
+        };
+        var {name12,decription='defalut'}=course2
+        console.log(name12);
+        console.log(decription);
+        
+        //
+        function logger(...params){
+            console.log(params);
+            
+        }
+        console.log(logger(12,3,4,5,6));
+        
+        
+    </script>
+</body>
+</html>

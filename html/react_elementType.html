@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        //function component
+        function Header(){
+            return (
+                <div className="header">new header</div>
+            )
+        }
+
+        // function Content(){
+        //     return(
+        //         <div className="content-cmn">new component</div>
+        //     )
+        // }
+        function Footer(){
+            return(
+                <div className="footer-cmn">new footer</div>
+            )
+        }
+        //dung voi class component (it dung hon)
+        class Content extends React.Component{
+            render(){
+                return (
+                    <div className="content">new content class</div>
+                )
+            }
+        }
+        const app=(
+            //dua function lam component
+            <div className="wrap">
+                
+                <Header/>
+                <Content/>
+                <Footer/>
+
+            </div>        
+        )
+
+        //render-->react18
+        const container=document.getElementById('root');
+        const root1=ReactDOM.createRoot(container);
+        root1.render(app);
+        
+    </script>
+</body>
+</html>

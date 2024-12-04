@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/dom_progresbar.js" defer></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        :root{
+            --progres-fill:#5656fa;
+            --progres-empty:#ccc;
+        }
+        h1{
+            text-align: center;
+            background-color: aqua;
+            color: var(--progres-fill);
+            border-radius: 50px;
+            max-width: 80vw;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+
+        }
+        .progres-wrapper{
+            display: flex;
+            width: 450px;
+            max-width: 100%;
+            justify-content: space-between;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        .progres-wrapper::before{
+            content: "";
+            background-color: var(--progres-empty);
+            height: 4px;
+            width: 100%;
+            z-index: -1;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .progres{
+            background-color: var(--progres-fill);
+            height: 4px;
+            width: 0%;
+            top: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+            z-index: -1;
+            transition: 0.7s;
+        }
+        .step{
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--progres-empty);
+            border: 3px solid var(--progres-empty);
+            transition: 0.7s;
+        }
+        .step.active{
+            color: var(--progres-fill);
+            border-color: currentColor;
+
+        }
+        .btn-group{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .btn{
+            background-color: var(--progres-fill);
+            color: white;
+            padding: 8px 30px;
+            border-radius: 6px;
+            border: 0;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .btn:active{
+            transform: scale(0.98);
+        }
+        .btn:disabled{
+            background-color: var(--progres-empty);
+            cursor: not-allowed;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <h1>progress bar</h1>
+    <div class="progres-wrapper">
+        <div class="progres" id="progres">
+
+        </div>
+        <div class="step active">1</div>
+        <div class="step">2</div>
+        <div class="step">3</div>
+        <div class="step">4</div>
+    </div>
+    <div class="btn-group">
+        <button class="btn" id="preview" disabled>prev</button>
+        <button class="btn" id="next">next</button>
+
+    </div>
+</body>
+</html>

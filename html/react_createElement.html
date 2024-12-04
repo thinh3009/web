@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 id="heading">hello</h1>
+    <script>
+        const h2=document.createElement('div');
+        h2.innerText="ohno";
+        console.log(h2);
+        document.body.appendChild(h2);
+        h2.id='xin';
+        h2.style='color:green';
+        Object.assign(h2.style,{
+            color:'green',
+            backgroundColor:'yellow'
+        });
+        console.log(React.version);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // khai bao expression
+        // const sinhVien = class {
+
+        // };
+        //c2: dung decoration
+        class sinhVien1 {
+            //thuoc tinh
+            constructor(fullName, ID, birthYear, homeTown) {
+                this.fullName = fullName;
+                this.ID = ID;
+                this.birthYear = birthYear;
+                this.homeTown = homeTown;
+            }
+            //phuong thuc
+            showInfor(){
+                return `${this.fullName} ${this.ID} ${this.homeTown}`
+            }
+            //phuong thuc cos tham so
+            calcAge(currentYear){
+                return currentYear-this.birthYear;
+            }
+        };
+        //tao doi tuong tu clas
+        const stu3=new sinhVien1("thinh",123123123,2002,"lam dong");
+        const stu4=new sinhVien1("vybeo",1231231123,2000,"lam dong");
+        console.log(stu3);
+        console.log(stu3.showInfor());
+        //them phuong thuc vao clas
+        /*sinhVien1.prototype.calcAge=function(currentYear){
+            return currentYear-this.birthYear;
+        };*/
+        console.log(stu3.calcAge(2024));
+        console.log(stu4.calcAge(2024));
+        console.log(stu3);
+        
+        
+        
+        </script>
+    </body>
+
+</html>

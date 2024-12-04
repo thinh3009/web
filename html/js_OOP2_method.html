@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.khai ao doi tuong
+        let student = {
+            //key:value
+            //thuoc tinh
+            fullName: "bui duc thinh",
+            birthYear: 2005,
+            address: {
+                city: "hanoi",
+                country: "viet nam",
+            },
+            score: [8, 9, 10],
+            //phuong thuc
+            getAge: function () {
+                return 2024 - this.birthYear;
+            },
+            //phuong thuc viet lai de tra ve 1 thuoc tinh
+            getAge2: function () {
+                this.age = 2024 - this.birthYear
+                return this.age;
+            },
+            diemTrungBinh: function () {
+                //tinh tong diem
+                sumDiem = this.score.reduce((a, b) => a + b, 0)
+                //tra diem trung binh
+                return sumDiem / 3;
+            },
+        };
+        let teacher = {
+            //truong hop ky tu dac biet dung nhay kep
+            "1 fullName": "thinh",
+            "@address": {
+                city: "hanoi",
+                country: "vietnam",
+            }
+        }
+        //1.Object.keys(obj)
+        let keys=Object.keys(student);
+        console.log(keys);
+        //2.Object.values(obj)
+        let values=Object.values(student);
+        console.log(values);
+        //3.Object.entries(obj)
+        let entry=Object.entries(student);
+        console.log(entry);
+        //4.Object.assign(targetmsource): sao chep thuoc tinh tu 1 hay nhieu doi tuong nguon
+        let target={c:100};
+        let source1={a:1};
+        let source2={b:2};
+        Object.assign(target,source1,source2);
+        console.log(target);
+        //dung spread()
+        let target2={...target,...source1,...source2};
+        console.log(target2);
+        //5.Object.hashOwn...:kiem tra doi tuong co mot thuoc tinh nao khong neu co tra TRUE va nguoc lai
+        console.log(student.hasOwnProperty("name"));
+        console.log(student.hasOwnProperty("fullName"));
+        //6.object.freeze(object): khong cho them xoa sua
+        //Object.freeze(teacher);
+        //gia su sua thuoc tinh
+        teacher["1 fullName"]="bui duc nam";
+        console.log(teacher);
+        //7.Object.seal():cho phep sua gia tri con lai khong cho
+        Object.seal(teacher);
+        teacher["location"]="my";
+        teacher["1 fullName"]="thinhthinh";
+        console.log(teacher);
+        
+        
+
+        
+
+    </script>
+</body>
+
+</html>

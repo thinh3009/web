@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <script>
+        //dom
+        // const h1Dom=document.createElement('h1');
+        // h1Dom.title='hello';
+        // h1Dom.className='heading';
+        // h1Dom.innerText='hello';
+        // document.body.appendChild(h1Dom);
+        //createlement react
+        // const h1React=React.createElement('h1',{
+        //     title:'hello',
+        //     className:'heading'
+
+        // }, 'hello guy!!')
+        // console.dir(h1Dom);
+        // console.log(h1React);
+        //dom ul
+        const ulDom = document.createElement('ul');
+        ulDom.id = 'ul-id'
+        ulDom.style = 'color:blue';
+        const liDom1 = document.createElement('li');
+        liDom1.innerText = 'js';
+        const liDom2 = document.createElement('li');
+        liDom2.innerText = 'python';
+        ulDom.appendChild(liDom1);
+        ulDom.appendChild(liDom2);
+        document.body.appendChild(ulDom);
+
+        //react
+        //Syntax: 
+        //React.createElement(type,props,children,n)
+        const ulReact = React.createElement(
+            'ul', {
+            id: 'ul-id',
+            style: 'color:red'
+        },
+            null,
+            React.createElement('li', { id: 'li-1' }, 'go'),
+            React.createElement('li', null, 'php'),
+
+        )
+        console.log(ulReact);
+
+        //bai tap
+        //dom
+        const div1 = document.createElement('div');
+        div1.className = 'post-item';
+        document.body.appendChild(div1);
+        const crth2 = document.createElement("h2");
+        crth2.title = "hoc react tai f8";
+        crth2.innerText = "hoc reactjs";
+        div1.appendChild(crth2);//them node con vao node cha
+        const tagP = document.createElement("p");
+        tagP.innerText = "hoc react co ban"
+        div1.appendChild(tagP);
+        //react
+        const React1 = React.createElement(
+            'div',
+            { className: 'post-item' },
+            React.createElement('h2', {title:'hoc tai f8'}, 'hoc react tai f8'),
+            React.createElement('p', null, 'hoc react tu co ban den nang cao')
+        );
+        console.log(React1);
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        m=['hoa','nam','hung'];
+        console.log(typeof m);
+        //1.khai ao doi tuong
+        let student={
+            //key:value
+            //thuoc tinh
+            fullName:"bui duc thinh",
+            birthYear:2005,
+            address:{
+                city:"hanoi",
+                country:"viet nam",
+            },
+            score:[8,9,10],
+            //phuong thuc
+            getAge:function(){
+                return 2024 - this.birthYear;
+            },
+            //phuong thuc viet lai de tra ve 1 thuoc tinh
+            getAge2:function(){
+                this.age=2024 - this.birthYear
+                return this.age;
+            },
+            diemTrungBinh:function(){
+                //tinh tong diem
+                sumDiem=this.score.reduce((a,b)=>a+b,0)
+                //tra diem trung binh
+                return sumDiem/3;
+            },
+        };
+        let teacher={
+            //truong hop ky tu dac biet dung nhay kep
+            "1 fullName":"thinh",
+            "@address":{
+                city:"hanoi",
+                country:"vietnam",
+            }
+        }
+        
+        console.log(typeof student);
+        console.log(typeof teacher);
+        //truy cap vao cac thuoc tinh
+        //1.su dung dot
+        console.log(student.fullName);
+        console.log(student.address);
+        //su dung []
+        console.log(teacher["1 fullName"]);
+        //su dung giua [] va bien
+        // let inputKey=prompt("moi nhap: (address,score)");
+        let inputKey="address";
+        console.log("truy xuat den key dung ten bien: ");
+        console.log(student[inputKey]);//nhap thuoc tinh co trong object student
+        console.log(Boolean(student[inputKey]));
+
+        
+        if(student[inputKey]){
+            console.log(student[inputKey]);
+        }
+        else{
+            console.log("key khong ton tai");
+            
+        }
+        //truy cap phuong thuc
+        console.log(student.getAge());
+        console.log(student.diemTrungBinh());
+        //vidu: can goi nhieu lan getAge() de tinh tuoi
+        // console.log(student.getAge());
+        //goi phuong thuc getAge2
+        student.getAge2();
+        //xuat thu tuoi thong qua thuoc tinh age moi them
+        console.log(student.age);
+        //them xoa thuoc tinh
+        //1.them
+        student.email="buithinh@gmail.com";
+        student["website"]="http://thinh.com"
+        //2.xoa
+        delete student.email;
+        //3.sua
+        student.website="gia tri da sua";
+        //xuat doi tuong
+        console.log(student);
+        
+        
+    </script>
+</body>
+</html>

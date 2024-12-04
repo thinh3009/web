@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.khai ao doi tuong
+        let student = {
+            //key:value
+            //thuoc tinh
+            fullName: "bui duc thinh",
+            birthYear: 2005,
+            address: {
+                city: "hanoi",
+                country: "viet nam",
+            },
+            score: [8, 9, 10],
+            //phuong thuc
+            getAge: function () {
+                return 2024 - this.birthYear;
+            },
+            //phuong thuc viet lai de tra ve 1 thuoc tinh
+            getAge2: function () {
+                this.age = 2024 - this.birthYear
+                return this.age;
+            },
+            diemTrungBinh: function () {
+                //tinh tong diem
+                sumDiem = this.score.reduce((a, b) => a + b, 0)
+                //tra diem trung binh
+                return sumDiem / 3;
+            },
+        };
+        //tao khuon mau (constructor)
+        const sinhVien=function(fullName,ID,birthYear,homeTown){
+            //khai bao cac thuoc tinh 
+            this.fullName=fullName;
+            this.ID=ID;
+            this.birthYear=birthYear;
+            this.homeTown=homeTown;
+            //phuong thuc
+            this.showInfor=function(){
+                return `${this.fullName} ${this.ID} ${this.homeTown}`
+            }
+
+        }
+
+        //dung function declaration
+        function Student(fullName,ID,birthYear,homeTown){
+            //khai bao cac thuoc tinh 
+            this.fullName=fullName;
+            this.ID=ID;
+            this.birthYear=birthYear;
+            this.homeTown=homeTown;
+            //phuong thuc
+            this.showInfor=function(){
+                return `${this.fullName} ${this.ID} ${this.homeTown}`
+            }
+
+        }
+        //tao cac doi tuong cu the
+        const sv1=new Student("thinh","2023123",2002,"lam dong");
+        const sv2=new Student("thinh","2023124",2002,"lao cai");
+        //truy cap thuoc tinh va phuong thuc
+        console.log(sv1.fullName);
+        console.log(sv1["ID"]);
+        console.log(sv2.showInfor());
+        //them xoa sua
+        // sv2.email="thinh@gmail.com";
+        sv2.fullName="ten sua";
+        console.log(sv2.showInfor());
+        //prototype
+        //mang thuc chat co kieu du lieu object
+        let M=new Array();
+        console.log(typeof M);
+        console.log(M);
+        console.log("xem nguyen mau cha me");
+        console.log(sv1);
+        console.log(Object.getPrototypeOf(sv1));
+        //cach khac
+        console.log(Student.prototype.isPrototypeOf(sv1));
+        //them phuong thuc vao student.prototyfe
+        //no khong hien ngoai ma hien trong prototype
+        
+        Student.prototype.calcA=function(){
+            console.log(2024-this.birthYear);
+        };
+        console.log(sv1);
+        //no co tinh ke thua nen co the goi phuong thuc trong prototype
+        sv1.calcA();
+        //them thuoc tinh vao Student.prototype
+        Student.prototype.email="noemail@gmail.com";
+        console.log(sv1.email);
+        console.log(sv2.email);
+        
+        //kiem tra co truc tiep chua thuoc tinh email khong
+        console.log(sv1.hasOwnProperty("email"));
+        console.log(sv1.hasOwnProperty("fullName"));
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>
