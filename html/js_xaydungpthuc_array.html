@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello</h1>
+    <script>
+        var course = [
+            'javascripts',
+            'php'
+        ]
+
+        for (var index in course) {
+            console.log(index);
+
+        }
+
+        Array.prototype.forEach2=function(callback){
+            for(var index in this){
+                console.log('index: ',index);
+                
+            }
+        }
+        course.length=1000;
+        //dung voi forEach
+        var ouput =course.forEach2(function (course, index, array) {
+            console.log(course, index, array);
+
+        });
+    </script>
+</body>
+
+</html>

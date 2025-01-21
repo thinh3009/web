@@ -1,0 +1,14 @@
+.nav-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links{
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.show-links{
+    height: 10rem;
+}

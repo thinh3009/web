@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        //     function Component({title,name}){
+        //         return (
+
+        //             <div>
+        //                 <h1>{title}</h1>    
+        //                 <h2>{name}</h2>    
+        //             </div>
+        //         )
+        //     }
+
+
+        //    function App(){
+        //         return (
+        //             <div id="swapper">
+        //                 <Component
+        //                     title="thinh"
+        //                     name="2024"
+        //                 />
+        //             </div>
+        //         )
+        //    }
+
+        //render bang spread es6
+        function DayLaSpred({ title, ...existsCp }) {
+            return (
+                <div>
+                    <h1>{title}</h1>
+                    <button className="btn">
+                        {existsCp.inputNamebtn}
+                    </button>
+                    <input type="text" placeholder={existsCp.nhapten} />
+                </div>
+            )
+
+        }
+
+        function App() {
+            return (
+
+                <div id="swapper">
+                    <DayLaSpred
+                        title="con lon nay"
+                        inputNamebtn="bam di may"
+                        nhapten="nhap ten vao di cu"
+
+                    />
+                </div>
+            )
+        }
+        const app = <App />;
+        const renderR = document.querySelector("#root");
+        const root = ReactDOM.createRoot(renderR);
+        root.render(app);
+    </script>
+</body>
+
+</html>

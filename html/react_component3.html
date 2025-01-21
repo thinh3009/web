@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        //dung binh thuong
+        // function App() {
+        //     let firstAccess=true
+        //     return (
+        //         <div id="wrapper">
+        //             {firstAccess && <h1>welcome back</h1>}
+        //         </div>
+        //     )
+        // }
+
+        //dung voi props
+        function App({title,content}) {
+            
+            return (
+                <div id="wrapper">
+                    <h1>{title||content}</h1>
+                </div>
+            )
+        }
+        const app = <App title="thinh" content="vybeo"/>;
+        const renderR = document.querySelector("#root");
+        const root = ReactDOM.createRoot(renderR);
+        root.render(app);
+    </script>
+</body>
+
+</html>

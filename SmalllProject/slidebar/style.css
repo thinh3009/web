@@ -1,0 +1,26 @@
+.sidebar-toggle{
+    margin-left: 700px;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-rows:auto 1fr auto ;
+    row-gap: 1rem;
+    box-shadow: rgb(73, 14, 14);
+    transition: 0.5s;
+    transform: translate(-100%);
+}
+.show-sidebar{
+    transform:  translate(0);
+}
+@media screen and (min-width:676px) {
+    .sidebar{
+        width: 400px;
+    }
+}

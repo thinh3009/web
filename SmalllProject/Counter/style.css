@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 50px;
+}
+h1 h2{
+    text-align: center;
+    margin-left: 40px;
+}
+button{
+    color: green;
+    border: 2px solid red;
+    font-size: 24px;
+
+}
+.btn1{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}

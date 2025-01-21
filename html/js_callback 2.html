@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>js basic</h1>
+    <script>
+        Array.prototype.map2=function(callback){
+            var arrayLength=this.length;
+            for(var i=0;i<arrayLength;i++){
+                callback(this[i],i);
+            }
+        }
+        courses=[
+            'js',
+            'php',
+            'ruby'
+        ];
+        courses.map2(function(course,index){
+            console.log(course,index);
+            
+        });
+
+
+    </script>
+</body>
+</html>

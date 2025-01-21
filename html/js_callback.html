@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myFunction(param){
+            param('may gio roi')//param la gia tri tu myCallback
+            
+
+        }
+        function myCallback(value){
+            console.log('toi la callback', value);//value nhan vao gia tri tu param
+            
+        }
+        myFunction(myCallback);//truyen tham so vao tu ham khac
+    </script>
+</body>
+</html>

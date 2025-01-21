@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // function Button({title,primary}){
+        //     //primary:co the dat la true hoac false new dua gia tri vao
+        //     console.log(primary);
+
+        //     return <button>{title}</button>
+        // }
+
+        // function App() {
+        //     // co the tao va goi bieu thuc vao props
+        //     const bieuthuc="xinhchao";
+        //     return(
+        //         <div id="wrapper">
+
+        //             <Button primary title={bieuthuc}/>
+        //         </div>
+        //     )
+
+
+
+        // }
+
+
+        //...inputProps:toan tu dai spread es6
+        // function Button({ label, ...inputProps }) {
+        //     return (
+        //         <div> 
+        //             <h1>{label}</h1>
+        //             <input {...inputProps} />
+        //         </div>
+        //     );
+        // }
+        // function App() {
+        //     return (
+        //         <div id="wrapper">
+        //             <input label="Full Name"
+        //                 title="day la input"
+        //                 type="text"
+        //                 placeholder="enter name..." 
+        //                 onFocus={()=>{
+        //                     console.log(Math.random());
+                            
+        //                 }}
+                        
+        //             />
+        //         </div>
+        //     );
+        // }
+
+
+        //children props
+        function Button({ children}) {
+            return (
+                <button>
+                    {children}</button>
+            );
+        }
+        function App() {
+            return (
+                <div id="wrapper">
+                    
+                    <Button>
+                        click me
+                    </Button>
+                    
+
+
+                   
+                </div>
+            );
+        }
+
+        const app = <App />;
+        const renderR = document.querySelector("#root");
+        const root = ReactDOM.createRoot(renderR);
+        root.render(app);
+    </script>
+</body>
+
+</html>
