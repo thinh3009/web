@@ -1,0 +1,23 @@
+.project , .des , .pos, .des , .team,.lib{
+    color: white;
+    font-size: 20px;
+    background-color: green;
+    padding-left:10px;
+    border-radius: 15px;
+    margin-bottom: 7px;
+}
+.pr1{
+    background: linear-gradient(to right,#A4E190,#7B734F);
+    border-radius: 14px;
+    padding:10px
+}
+.pr2{
+    background: linear-gradient(to right,#D9C268,#3492B2);
+    border-radius: 14px;
+    padding:10px
+}
+.pr3{
+    background: linear-gradient(to right,#AD88B7,#1DA581);
+    border-radius: 14px;
+    padding:10px
+}

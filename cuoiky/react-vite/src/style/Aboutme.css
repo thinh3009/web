@@ -1,0 +1,36 @@
+
+/* .container{
+    width: 543px;
+    height: 56px;
+} */
+
+#root{
+    width: 800px;
+    height: 1000px;
+    margin-bottom: 700px;
+    font-family: "Ribeye", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.q1{
+    
+    width: 24px;
+    height: 24px;
+}
+
+.q2{
+   
+    left: 1300px;
+    right: 40px;
+    width: 24px;
+    height: 24px;
+}
+.table1{
+    background: #E3DAC1;
+}
+.table2{
+    background: #E3DAC1;
+}
+.table3{
+    background: #E3DAC1;
+}
