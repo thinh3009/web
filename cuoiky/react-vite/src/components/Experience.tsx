@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Company1 from '../layout/Company1';
 import Company2 from '../layout/Company2';
 import Company3 from '../layout/Company3';
-
+// import '/style/Button.css';
 function Experience() {
     const companies = [<Company1 />, <Company2 />, <Company3 />];
     const [currentIdx, setCurrentIdx] = useState(0);
@@ -18,7 +18,7 @@ function Experience() {
     return (
         <>
             <div className="container">
-                <h1 className='mt-6 mb-6 text-center rounded-full text-rose-100'>My experience</h1>
+                <h1 className='mt-6 mb-6 text-center rounded-full text-slate-950'>My experience</h1>
                 <div className="flex justify-between">
                     <div className="previous-btn">
                         <button onClick={handlePrevClick} className="mt-20 rounded-full hover:bg-yellow-300 active:bg-orange-500 focus:outline-none focus:ring focus:ring-violet-300">

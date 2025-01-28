@@ -20,7 +20,7 @@ function Project() {
     return (
         <>
             <div className="container">
-                <h1 className='mt-6 mb-6 text-center rounded-full text-rose-100'>My project</h1>
+                <h1 className='mt-6 mb-6 text-center rounded-full text-slate-950'>My project</h1>
                 <div className="flex justify-between">
                     <div className="previous-btn ">
                         <button onClick={handlePrevClick} className="mt-60 rounded-full hover:bg-yellow-300 active:bg-orange-500 focus:outline-none focus:ring focus:ring-violet-300">

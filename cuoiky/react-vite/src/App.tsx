@@ -10,6 +10,7 @@ import Experience from './components/Experience.tsx'
 import AboutMe from './components/AboutMe.tsx'
 import Contact from './components/Contact.tsx'
 import Skill from './components/Skill.tsx'
+
 function App() {
 
 
@@ -22,11 +23,10 @@ function App() {
               <Route path='home' element={<Home/>}></Route>
               <Route path='about' element={<AboutMe/>}></Route>
               <Route path='project' element={<Project/>}></Route>
-              <Route path='skill' element={<Skill/>}></Route>
+              <Route path='skill' element={<Skill bgcolor={''} completed={0}/>}></Route>
               <Route path='contact' element={<Contact/>}></Route>
               <Route path='experience' element={<Experience/>}></Route>
-              
-
+             
             </Routes>
           <Footer/>
 

@@ -4,9 +4,9 @@ function AboutMe() {
     return (
         <>
             <div className='container'>
-                <h1 className='mt-6 mb-6 text-center rounded-full text-rose-100'>About me</h1>
+                <h1 className='mt-6 mb-6 text-center rounded-full text-slate-950'>About me</h1>
                 <img src="..\assets\quote.svg" alt="" className='q1' />
-                <p className='mt-3 ml-6 text-rose-100'>
+                <p className='mt-3 ml-6 text-slate-950'>
                     My name is Bui Duc Thinh now I am graduate in university of transport and communication in Ho Chi Minh city and my major is information technology.
                     <br />
                     Through of learning and experience I have to opporturnity to learn about how to learn and deisign a web site so I am very exited to find a job about design and develop the frontend for website

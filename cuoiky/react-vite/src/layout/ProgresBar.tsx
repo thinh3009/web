@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+
 import Pro from '../types/Bar';
 
 function ProgresBar(props:Pro) {

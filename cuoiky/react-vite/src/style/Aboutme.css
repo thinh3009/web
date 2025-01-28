@@ -5,6 +5,7 @@
 } */
 
 #root{
+    box-sizing: border-box;
     width: 800px;
     height: 1000px;
     margin-bottom: 700px;
